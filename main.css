@@ -1,0 +1,51 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    margin: 10px;
+}
+a{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+#blue{
+    background-color: blue;
+    cursor: pointer;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+img:active{
+    box-shadow: 10px 10px gray;
+}
+#blue:active{
+    display: inline-block;
+    transform:scale(2,10);
+}
+@keyframes blue{
+    0%{transform:translate(40px,40px)}
+    50%{transform:translate(0px,40px)}
+    100%{transform:translate(0px,0px)}
+}
+#animation{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+}
+#animation:active{
+    animation-name: changeWidth;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-delay: 1s;
+}
+@keyframes changeWidth{
+    from{width:300px}
+    to{width: 600px;}
+}

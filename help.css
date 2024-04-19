@@ -1,0 +1,17 @@
+#animation {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    animation-name: changeWidth; 
+    animation-duration: 3s; 
+    animation-iteration-count: 6; 
+    animation-timing-function: ease;
+    animation-direction: alternate; 
+    animation-delay: 2s; 
+    }
+    /* @keyframes 옆에는 animation-name 
+    속성의 속성값을 입력합니다. */
+    @keyframes changeWidth { 
+    from { width: 300px; }
+    to { width: 600px; }
+    }
