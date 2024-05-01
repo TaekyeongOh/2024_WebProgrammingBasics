@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>copy</title>
+    <style>
+        #animation{
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-color: mediumpurple;
+            animation-name: move-down, rotate-scale-up;
+            animation-duration: 3s;
+            animation-timing-function: ease;
+            animation-delay: 2s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+
+        }
+        .rotate-scale-up{
+            animation: rotate-scale-up 0.65s linear both;
+        }
+        @keyframes rotate-scale-up{
+            0% {transform: scale(1) rotateZ(0);}
+            50%{transform: scale(2) rotateZ(200deg)}
+            100% {transform: scale(1) rotateZ(360deg);}
+        }
+        @keyframes move-down{
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                left: 500px;
+                top: 0px;
+            }
+            50% {
+                left: 500px;
+                top: 500px;
+            }
+            75% {
+                left: 0px;
+                top: 500px;
+            }
+            100%{
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="animation"></div>
+</body>
+</html>
