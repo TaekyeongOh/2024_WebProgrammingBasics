@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my_div {
+            background: green;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='my_div'>
+    </div>
+
+    <input id='clearbtn' type='button' value='clear' />
+    <!--'type='button''은 요소가 버튼임을 나타내고
+    'value='clear''은 버튼에 clear이라는 텍스트를 표시함-->
+    <div id='result'>
+    <!--빈 <div>요소로 나중에 js에 따라 결과가 print됨-->
+    </div>
+
+    <script>
+        // 정의하는 과정이라고 생각하면 편함 / document.getElementById method를 사용해 HTML 문서에서 특정 id를 가진 요소 선택
+        const div = document.getElementById('my_div');
+        // div를 document속 id가 'my_div'인 것으로 지정
+        const clearbtn = document.getElementById('clearbtn');
+        // clearbtn을 document속 id가 'clearbtn'인 것으로 지정
+        const result = document.getElementById('result');
+        // result를 document속 id가 'result'인 것으로 지정 
+
+        div.addEventListener('click', (event) => {
+            result.innerHTML += '<div>click</div>';
+        });
+        // div 요소에 click라는 EventListener 추가함
+        // callback 함수는 event를 매개변수로 받음
+        // result 요소의 HTML 내용을 업데이트해 'click'라는 텍스트 요소가 포함된 새로운 div 추가
+
+        div.addEventListener('mousedown', (event) => {
+            result.innerHTML += '<div>mousedown</div>';
+        });
+        // div 요소에 mousedown이라는 EventListener 추가함
+        // result 요소의 HTML 내용을 업데이트해 추가적으로 'mousedown'라는 텍스트 요소가 포함된 새로운 div 요소 추가
+
+        div.addEventListener('mouseup', (event) => {
+            result.innerHTML += '<div>mouseup</div>';
+        });
+        // div 요소에 mouseup이라는 EventListener 추가함
+        // result 요소의 HTML 내용을 업데이트해 'mouseup'라는 텍스트 요소가 포함된 새로운 div 추가됨
+
+        clearbtn.addEventListener('click', (event) => {
+            result.innerHTML = '';
+        });
+        // clearbtn 요소에 click라는 EventListener 추가함
+        // result 요소의 HTML 내용을 빈 문자열로 설정해 모든 내용을 지움
+    </script>
+</body>
+
+</html>

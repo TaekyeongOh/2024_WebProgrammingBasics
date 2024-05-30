@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+
+    <style>
+        #my_div {
+            background: green;
+            height: 100px;
+            width: 100px;
+        }
+
+        #new_btn {
+            background-color: #fff;
+            height: 20px;
+            width: 20px;
+        }
+        .ssdiv1{
+            background: green;
+            height: 100px;
+            width: 100px;
+        }
+        .ssdiv2{
+            background: red;
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='my_div'>
+    </div>
+    <input id='clearbtn' type='button' value='clear' />
+    <div id='result'>
+    </div>
+    <script>
+        const div = document.getElementById('my_div');
+        const clearbtn = document.getElementById('clearbtn');
+        const result = document.getElementById('result');
+
+        my_div.addEventListener('click', (event) => {
+            result.innerHTML = result.innerHTML + '<div>click<div>';
+            my_div.innerHTML = '<div>click<div>';
+            my_div.innerHTML = "<input type='button' id='new_btn'>";
+
+        });
+
+
+        clearbtn.addEventListener('click', (event) => {
+            result.innerHTML = '';
+            my_div.innerHTML = '';
+        });
+
+        div.addEventListener('mouseover', (event) => {
+            result.innerHTML += '<div>mouseover</div>';
+            div.classList.remove('ssdiv2');
+            div.classList.add('ssdiv1');
+        });
+
+        div.addEventListener('mouseout', (event) => {
+            result.innerHTML += '<div>mouseout</div>';
+            div.classList.remove('ssdiv1');
+            div.classList.add('ssdiv2');
+        });
+
+        // div.addEventListener('click', (event) => {
+        // result.innerHTML+= '<div>click</div>';
+        // });
+
+        div.addEventListener('mousedown', (event) => {
+        result.innerHTML+= '<div>mousedown</div>';
+        });
+
+        div.addEventListener('mouseup', (event) => {
+        result.innerHTML+= '<div>mouseup</div>';
+        });
+
+        // clearbtn.addEventListener('click', (event) => {
+        // result.innerHTML= '';
+        // });
+    </script>
+</body>
+
+</html>

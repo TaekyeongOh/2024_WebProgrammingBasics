@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my_div {
+            background: green;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='my_div'>
+    </div>
+    <input id='clearbtn' type='button' value='clear' />
+    <div id='result'>
+    </div>
+
+    <script>
+        const div = document.getElementById('my_div');
+        const clearbtn = document.getElementById('clearbtn');
+        const result = document.getElementById('result');
+
+        div.addEventListener('mousemove', (event) => {
+            result.innerHTML += '<div>mousemove</div>';
+        });
+
+        clearbtn.addEventListener('click', (event) => {
+            result.innerHTML = '';
+            count = 0;
+        });
+    </script>
+</body>
+
+</html>
