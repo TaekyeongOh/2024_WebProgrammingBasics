@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='ex'></div>
+    <input type='button' value='클래스 이름 설정' onclick='setClassName()' />
+    <input type='button' value='클래스 이름 추가' onclick='addClassName()' />
+    <input type='button' value='클래스 이름 여러개 추가' onclick='addClassNames()' />
+    <input type='button' value='클래스 이름 변경' onclick='changeClassName()' />
+
+    <script>
+        // 클래스 이름 설정
+        function setClassName() {
+            document.getElementById('ex').className = 'foo';
+            alert(document.getElementById('ex').className);
+        }
+
+        // 클래스 추가
+        function addClassName() {
+            document.getElementById('ex').classList.add('bar');
+            alert(document.getElementById('ex').className);
+        }
+
+        // 클래스 여러개 추가
+        function addClassNames() {
+            document.getElementById('ex').classList.add('baz', 'qux');
+            alert(document.getElementById('ex').className);
+        }
+
+        // 클래스 변경
+        function changeClassName() {
+            document.getElementById('ex').classList.add('bar');
+            alert('변경전 : ' + document.getElementById('ex').className);
+            document.getElementById('ex').classList.replace('bar', 'car');
+            alert('변경후 : ' + document.getElementById('ex').className);
+        }
+    </script>
+</body>
+
+</html>
