@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my_div{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+        #btn{
+            margin-top: 20px;
+            height: 20px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="my_div"></div>
+    <!-- <button id="btn" value="clear">clear</button> -->
+    <button id="btn" value="clear" type="button">clear</button>
+    <div id="result"></div>
+
+    <script>
+        const div = document.getElementById('my_div');
+        const btn = document.getElementById('btn');
+        const result = document.getElementById('result');
+
+        div.addEventListener('click',(event)=>{
+            result.innerHTML += '<div>click</div>'
+        })
+        btn.addEventListener('click',(event)=>{
+            result.innerHTML=''
+        })
+    </script>
+</body>
+</html>
