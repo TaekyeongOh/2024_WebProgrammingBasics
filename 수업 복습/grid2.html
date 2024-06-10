@@ -1,0 +1,48 @@
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 100px 100px;
+        grid-gap: 10px;
+        padding: 10px;
+        grid-template-areas:
+            "header header header"
+            "main main sidebar"
+            "footer footer footer";
+    }
+
+    .header {
+        grid-area: header;
+        background-color: red;
+    }
+
+    .main {
+        grid-area: main;
+        background-color: yellow;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        background-color: green;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: blue;
+    }
+
+    .grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:white;
+        font-size: 1.5em;
+    }
+</style>
+
+<div class="grid-container">
+    <div class="grid-item header">header</div>
+    <div class="grid-item main">main</div>
+    <div class="grid-item sidebar">sidebar</div>
+    <div class="grid-item footer">footer</div>
+</div>
