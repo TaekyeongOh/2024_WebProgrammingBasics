@@ -1,0 +1,24 @@
+<div id='ex' class='foo bar'></div>
+<input type='button' value='class 이름 읽기' onclick='getClassName()' />
+<input type='button' value='class item 개수 확인' onclick='getCountClassItem()' />
+<input type='button' value='class 이름 하나씩 읽기' onclick='getClassItemName()' />
+<script>
+    // class 이름 읽기
+    function getClassName() {
+        alert(document.getElementById('ex').classList);
+    }
+
+    // class item 개수 확인
+    function getCountClassItem() {
+        alert(document.getElementById('ex').classList.length);
+    }
+
+    // class 이름 하나씩 읽기
+    function getClassItemName() {
+        const classLength =
+            document.getElementById('ex').classList.length;
+        for (let i = 0; i < classLength; i++) {
+            alert(document.getElementById('ex').classList.item(i));
+        }
+    }
+</script>
